@@ -9,7 +9,7 @@
 
 ## Contenido de la versión
 
-Esta versión reúne la descripción del problema, el objetivo del sistema, las funcionalidades previstas, la propuesta de separación frontend/backend, las herramientas de gestión y un resumen de los avances documentados durante la asignatura. También establece una base para organizar los requisitos, la arquitectura y el seguimiento de tareas.
+Esta versión reúne la descripción del problema, el objetivo del sistema, las funcionalidades previstas, la propuesta de separación frontend/backend, las herramientas de gestión, los requisitos iniciales y el seguimiento de tareas. Se añadieron cinco fuentes editables de diagramas: casos de uso, clases, secuencia, actividad y arquitectura.
 
 ## Cambios controlados
 
@@ -17,11 +17,13 @@ Esta versión reúne la descripción del problema, el objetivo del sistema, las 
 - Se registra un resumen de cinco avances de análisis, diseño y gestión.
 - Se describe una organización frontend/backend y su mecanismo de comunicación propuesto.
 - Se identifican requisitos iniciales y responsabilidades de los componentes.
+- Se agregan reconstrucciones editables de los diagramas UML y de arquitectura en `docs/uml/`.
+- Se deja constancia de que los diagramas incorporados son reconstrucciones a partir de información disponible, no archivos originales ni capturas de Visual Paradigm.
 - Se establece explícitamente que el repositorio no contiene todavía una aplicación funcional implementada.
 
 ## Aspectos pendientes
 
-- Incorporar los documentos y evidencias originales de requisitos y diagramas UML.
+- Comparar las reconstrucciones con los diagramas originales de Visual Paradigm y corregir diferencias si las hubiera.
 - Agregar capturas verificables del tablero GitHub Projects y de los Issues seleccionados.
 - Revisar las posiciones de las tareas en el tablero para que correspondan con su progreso real.
 - Definir las tecnologías concretas del frontend, backend y base de datos.
@@ -30,7 +32,7 @@ Esta versión reúne la descripción del problema, el objetivo del sistema, las 
 
 ## Próximo paso técnico
 
-La siguiente etapa recomendada es consolidar las evidencias del diseño y confirmar el estado de los Issues. Después, se debe seleccionar la tecnología de implementación y desarrollar un flujo mínimo completo: iniciar sesión, consultar disponibilidad y registrar una cita, acompañado de pruebas que permitan comprobar su funcionamiento.
+La siguiente etapa recomendada es comparar los diagramas reconstruidos con los modelos originales y confirmar el estado de los Issues y del tablero. Después, se debe seleccionar la tecnología de implementación y desarrollar un flujo mínimo completo: iniciar sesión, consultar disponibilidad y registrar una cita, acompañado de pruebas que permitan comprobar su funcionamiento.
 
 ## Criterio de aceptación
 

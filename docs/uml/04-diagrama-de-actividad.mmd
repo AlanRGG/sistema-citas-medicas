@@ -1,21 +1,21 @@
 flowchart TD
-    A([Inicio]) --> B[Paciente inicia sesión]
-    B --> C[Abre consulta de horarios]
-    C --> D[Selecciona fecha]
-    D --> E[El sistema consulta disponibilidad]
+    A([Inicio]) --> B[El paciente inicia sesión]
+    B --> C[Abre la consulta de horarios]
+    C --> D[Selecciona una fecha]
+    D --> E[El sistema consulta la disponibilidad]
     E --> F{¿Hay horarios disponibles?}
-    F -- No --> G[Mostrar aviso y permitir otra fecha]
+    F -- No --> G[Mostrar aviso y permitir elegir otra fecha]
     G --> D
-    F -- Sí --> H[Paciente elige un horario]
-    H --> I[Paciente confirma solicitud]
-    I --> J[Backend valida sesión y disponibilidad]
-    J --> K{¿Horario sigue libre?}
+    F -- Sí --> H[El paciente elige un horario]
+    H --> I[Confirma la solicitud de cita]
+    I --> J[El servidor valida la sesión y la disponibilidad]
+    J --> K{¿El horario sigue libre?}
     K -- No --> L[Informar que el horario ya fue reservado]
     L --> C
-    K -- Sí --> M[Guardar cita y actualizar horario]
+    K -- Sí --> M[Guardar la cita y actualizar el horario]
     M --> N{¿Se guardó correctamente?}
-    N -- No --> O[Mostrar error y conservar datos de la solicitud]
+    N -- No --> O[Mostrar un mensaje de error]
     O --> C
-    N -- Sí --> P[Generar confirmación y notificación]
-    P --> Q[Mostrar cita confirmada]
+    N -- Sí --> P[Preparar la confirmación y la notificación]
+    P --> Q[Mostrar la cita confirmada]
     Q --> R([Fin])

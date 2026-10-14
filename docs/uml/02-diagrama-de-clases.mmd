@@ -1,0 +1,59 @@
+classDiagram
+direction LR
+
+class Usuario {
+  +UUID id
+  +String nombre
+  +String correo
+  +String contrasenaHash
+  +String rol
+  +registrarse()
+  +iniciarSesion()
+}
+
+class Paciente {
+  +String telefono
+  +consultarCitas()
+  +solicitarCita()
+  +cancelarCita()
+}
+
+class Administrador {
+  +crearHorario()
+  +actualizarHorario()
+  +gestionarCitas()
+}
+
+class Cita {
+  +UUID id
+  +Date fecha
+  +String hora
+  +String estado
+  +DateTime fechaCreacion
+  +confirmar()
+  +cancelar()
+}
+
+class Horario {
+  +UUID id
+  +Date fecha
+  +String horaInicio
+  +String horaFin
+  +Boolean disponible
+  +verificarDisponibilidad()
+}
+
+class Notificacion {
+  +UUID id
+  +String mensaje
+  +DateTime fechaEnvio
+  +String estado
+  +enviar()
+}
+
+Usuario <|-- Paciente
+Usuario <|-- Administrador
+Paciente "1" --> "0..*" Cita : solicita
+Cita "0..*" --> "1" Horario : reserva
+Paciente "1" --> "0..*" Notificacion : recibe
+Administrador "1" --> "0..*" Horario : administra

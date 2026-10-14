@@ -1,0 +1,14 @@
+flowchart TB
+    U[Paciente / Administrador] --> UI[Frontend<br/>Interfaz de usuario]
+    UI -->|HTTPS + JSON mediante API| API[Backend<br/>Lógica de negocio y API]
+    API --> AUTH[Autenticación y autorización]
+    API --> CITAS[Gestión de citas]
+    API --> HOR[Gestión de horarios]
+    CITAS --> DB[(Base de datos)]
+    HOR --> DB
+    AUTH --> DB
+    CITAS --> NOTI[Servicio de notificaciones]
+    NOTI --> EXT[Correo o canal de notificación]
+
+    classDef pending stroke-dasharray: 5 5
+    class UI,API,AUTH,CITAS,HOR,DB,NOTI,EXT pending

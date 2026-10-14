@@ -2,12 +2,12 @@ classDiagram
 direction LR
 
 class Usuario {
-  +UUID id
+  +UUID identificador
   +String nombre
   +String correo
-  +String contrasenaHash
-  +String rol
-  +registrarse()
+  +String claveCifrada
+  +String tipoDeUsuario
+  +crearCuenta()
   +iniciarSesion()
 }
 
@@ -25,28 +25,28 @@ class Administrador {
 }
 
 class Cita {
-  +UUID id
+  +UUID identificador
   +Date fecha
   +String hora
   +String estado
-  +DateTime fechaCreacion
+  +DateTime fechaDeCreacion
   +confirmar()
   +cancelar()
 }
 
 class Horario {
-  +UUID id
+  +UUID identificador
   +Date fecha
-  +String horaInicio
-  +String horaFin
+  +String horaDeInicio
+  +String horaDeFin
   +Boolean disponible
   +verificarDisponibilidad()
 }
 
 class Notificacion {
-  +UUID id
+  +UUID identificador
   +String mensaje
-  +DateTime fechaEnvio
+  +DateTime fechaDeEnvio
   +String estado
   +enviar()
 }

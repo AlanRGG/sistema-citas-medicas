@@ -73,6 +73,8 @@ Los diagramas UML originales y las capturas de GitHub Projects deben incorporars
 
 ## 8. Diagramas del sistema
 
+Puedes consultar las visualizaciones renderizadas en la [página de diagramas UML](docs/uml/DIAGRAMAS.md). También se conservan sus fuentes editables individuales en la carpeta `docs/uml/`.
+
 Se incorporaron **reconstrucciones documentales** de los diagramas a partir de la información del proyecto que se pudo recuperar. Son fuentes editables guardadas en el repositorio; no deben presentarse como capturas originales de Visual Paradigm. Antes de una entrega que exija evidencias originales, conviene compararlas con los diagramas del proyecto de Visual Paradigm y ajustar cualquier diferencia.
 
 - [Diagrama de casos de uso (PlantUML)](docs/uml/01-casos-de-uso.puml)

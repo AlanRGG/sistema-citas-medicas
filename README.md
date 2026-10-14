@@ -71,19 +71,31 @@ La tecnología concreta para implementar la interfaz, la API y la base de datos 
 
 Los diagramas UML originales y las capturas de GitHub Projects deben incorporarse como evidencias cuando estén disponibles. No se consideran incluidos en el repositorio hasta que sus archivos o enlaces se agreguen expresamente.
 
-## 8. Estado actual y próximos pasos
+## 8. Diagramas del sistema
+
+Se incorporaron **reconstrucciones documentales** de los diagramas a partir de la información del proyecto que se pudo recuperar. Son fuentes editables guardadas en el repositorio; no deben presentarse como capturas originales de Visual Paradigm. Antes de una entrega que exija evidencias originales, conviene compararlas con los diagramas del proyecto de Visual Paradigm y ajustar cualquier diferencia.
+
+- [Diagrama de casos de uso (PlantUML)](docs/uml/01-casos-de-uso.puml)
+- [Diagrama de clases (Mermaid)](docs/uml/02-diagrama-de-clases.mmd)
+- [Diagrama de secuencia para agendar una cita (Mermaid)](docs/uml/03-diagrama-de-secuencia.mmd)
+- [Diagrama de actividad para agendar una cita (Mermaid)](docs/uml/04-diagrama-de-actividad.mmd)
+- [Diagrama de arquitectura inicial (Mermaid)](docs/uml/05-diagrama-de-arquitectura.mmd)
+
+Los archivos Mermaid pueden revisarse directamente en GitHub y editarse como texto. El diagrama de casos de uso está en formato PlantUML para conservar la notación UML de actores y casos de uso.
+
+## 9. Estado actual y próximos pasos
 
 El proyecto se encuentra en una etapa de diseño y documentación. Hay Issues registrados para representar tareas iniciales y pendientes; la arquitectura inicial aparece documentada en el seguimiento del repositorio. No se debe considerar completada una funcionalidad solo por tener un Issue o una descripción.
 
 Próximos pasos técnicos:
 
-1. Incorporar al repositorio las evidencias de requisitos, modelos UML y arquitectura.
+1. Comparar y validar las reconstrucciones UML con los diagramas del proyecto original.
 2. Confirmar el estado real de cada tarea en GitHub Projects y mantenerlo alineado con sus Issues.
 3. Elegir tecnologías concretas para frontend, backend y base de datos.
 4. Implementar primero autenticación y gestión básica de citas.
 5. Preparar pruebas funcionales y de seguridad antes de considerar una versión ejecutable.
 
-## 9. Control de versión documental
+## 10. Control de versión documental
 
 **Versión documental:** 0.1.0  
 **Tipo:** línea base inicial de documentación y diseño.  

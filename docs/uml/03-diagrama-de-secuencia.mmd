@@ -1,25 +1,25 @@
 sequenceDiagram
     autonumber
     actor Paciente
-    participant UI as Interfaz (Frontend)
-    participant API as Servicio de citas (Backend)
+    participant UI as Interfaz de usuario
+    participant API as Servicio de citas
     participant DB as Base de datos
     participant NOTI as Servicio de notificaciones
 
     Paciente->>UI: Selecciona fecha y horario
-    UI->>API: Solicitar horarios disponibles
-    API->>DB: Consultar horarios libres
-    DB-->>API: Lista de horarios
-    API-->>UI: Mostrar disponibilidad
-    Paciente->>UI: Confirma horario
-    UI->>API: Crear solicitud de cita
-    API->>DB: Verificar disponibilidad actual
-    DB-->>API: Horario disponible
-    API->>DB: Guardar cita y marcar horario reservado
-    DB-->>API: Confirmación de guardado
-    API->>NOTI: Solicitar notificación de confirmación
-    NOTI-->>API: Resultado del envío
-    API-->>UI: Cita creada
-    UI-->>Paciente: Mostrar confirmación
+    UI->>API: Solicita horarios disponibles
+    API->>DB: Consulta horarios libres
+    DB-->>API: Devuelve lista de horarios
+    API-->>UI: Envía disponibilidad
+    Paciente->>UI: Confirma el horario elegido
+    UI->>API: Solicita crear la cita
+    API->>DB: Verifica disponibilidad actual
+    DB-->>API: Confirma que el horario está libre
+    API->>DB: Guarda la cita y reserva el horario
+    DB-->>API: Confirma el registro
+    API->>NOTI: Solicita enviar confirmación
+    NOTI-->>API: Devuelve resultado del envío
+    API-->>UI: Informa que la cita fue creada
+    UI-->>Paciente: Muestra la confirmación
 
-    Note over API,DB: Si el horario ya no está disponible, el backend rechaza la reserva y solicita elegir otro.
+    Note over API,DB: Si el horario ya no está disponible, el servidor rechaza la reserva y pide elegir otro.
